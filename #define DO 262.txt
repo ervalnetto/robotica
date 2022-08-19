@@ -1,0 +1,44 @@
+#define DO 262
+#define RE 294
+#define MI 330
+#define FA 349
+#define SOL 392
+#define LA 440
+int SI = 490;
+
+#define pausa_curta 200
+int pausa_longa = 400;
+int pino_buzzer = 11;
+
+
+void setup() {
+
+  pinMode(pino_buzzer, OUTPUT);/* INPUT */
+
+  /* Canção dentro da função setup tocará apenas uma vez. */
+
+  /*  DO RE MI FA FA FA    */
+  /*  DO RE DO RE RE RE    */
+  /*  DO SOL FA MI MI MI   */
+  /*  DO RE MI FA FA FA    */
+
+/* tone(pino do buzzer, frequência da nota, duração da nota em ms); */
+
+  tone(pino_buzzer, DO, 200); //DO
+  delay(pausa_curta);
+  tone(pino_buzzer, RE, 300); //RE
+  delay(pausa_curta);
+  tone(pino_buzzer, MI, 300); //MI
+  delay(pausa_curta);
+  tone(pino_buzzer, FA, 300); //FA
+  delay(pausa_longa);
+  tone(pino_buzzer, FA, 300); //FA
+  delay(pausa_longa);
+  tone(pino_buzzer, FA, 300); //FA
+  delay(pausa_longa);
+
+}
+
+void loop() {
+
+}
